@@ -1,3 +1,4 @@
+>> car_data = load('car.dat');
 >> x = car_data(:,1);
 >> y = car_data(:,2);
 >> m = length(y);
@@ -10,8 +11,9 @@ error: called from
     xlabel at line 51 column 8
 >> xlabel('(y)Weight -->','fontsize',14);
 >> ylabel('(x)mpg -->','fontsize',14);
->> fprintf("press key to continue...");
-press key to continue...>> pause;
+>> fprintf("press key to continue...\n");
+press key to continue...
+>> pause;
 >> x = [ones(m,1),x];
 >> theta = zeros(2,1);
 >> numIter = 1000;
@@ -26,32 +28,8 @@ end
 >> fprintf('theta(0) = %f , theta(1) = %f\n',theta(1),theta(2));
 theta(0) = 36.966249 , theta(1) = -5.570620
 >> hold on;
->> plot(x(:,2),x*theta,'r-','linewidth','2');
-error: set: invalid value for double property "linewidth"
-error: __go_line__: unable to create graphics handle
-error: called from
-    __line__ at line 120 column 16
-    line at line 58 column 8
-    __plt__>__plt2vv__ at line 496 column 10
-    __plt__>__plt2__ at line 242 column 14
-    __plt__ at line 107 column 17
-    plot at line 223 column 10
 >> plot(x(:,2),x*theta,'r-','linewidth',2);
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
->>
+
 >> hold off;
 >> pause;
 >> predict = [1.3,3.6,5.5];
